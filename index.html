@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body >
+
+
+    <div id="menu_burger_opt">
+
+        <h2>Categories</h2>
+
+        <li>Shooting Drill</li>
+        <li>Flip Reset</li>
+        <li>Air Dribble</li>
+        <li>Flick</li>
+
+        <li>New here?</li>
+
+        <img src="data:image/png;base64,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" alt="">
+
+    </div>
+
+    <div class="container" id="top_nav">
+        <h2>Rocket League Tracker</h2>
+
+        <svg id="burger_menu" onclick="burger_menu_clicked()" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15" width="7%" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 3C1.22386 3 1 3.22386 1 3.5C1 3.77614 1.22386 4 1.5 4H13.5C13.7761 4 14 3.77614 14 3.5C14 3.22386 13.7761 3 13.5 3H1.5ZM1 7.5C1 7.22386 1.22386 7 1.5 7H13.5C13.7761 7 14 7.22386 14 7.5C14 7.77614 13.7761 8 13.5 8H1.5C1.22386 8 1 7.77614 1 7.5ZM1 11.5C1 11.2239 1.22386 11 1.5 11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H1.5C1.22386 12 1 11.7761 1 11.5Z" fill="currentColor"></path></svg>
+    </div>
+
+
+
+    <br>
+    <div class="container">
+
+        <div id="tuka_slika">
+            <img id="imagePreview" src="" alt="Image Preview" style="max-width: 100%; height: 100px;display: none;"><br><br>
+        </div>
+        <div id="sub-title">            
+            
+            <h2 id="this_bye">Previous Record Here</h2>
+        
+        </div>
+
+
+
+        
+
+        <!-- File Upload Form -->
+        <form id="uploadForm" onsubmit="event.preventDefault();">
+
+            <div id="icons">
+
+                <label for="fileInput"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" width="7%" xmlns="http://www.w3.org/2000/svg"><path d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"></path></svg></label>
+                <input type="file" id="fileInput" accept="image/*" >
+
+                <svg stroke="currentColor" onclick="captureScreenshot()" fill="white" stroke-width="0" viewBox="0 0 24 24" width="10%" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path d="M17 4h3c1.1 0 2 .9 2 2v2h-2V6h-3V4zM4 8V6h3V4H4c-1.1 0-2 .9-2 2v2h2zm16 8v2h-3v2h3c1.1 0 2-.9 2-2v-2h-2zM7 18H4v-2H2v2c0 1.1.9 2 2 2h3v-2zM18 8H6v8h12V8z"></path></svg>
+            </div>  <br>
+
+            <div id="difficultry_mode">
+                <button >Easy</button>
+                <button >Medium</button>
+                <button >Hard</button>
+    
+            </div><br>
+
+            <!-- Display the Image Preview -->
+            <div id="hey">
+                <h2>Select category to start</h2><hr>
+                <h1>0 / 100</h1>
+                
+            </div>
+
+            <div id="plus_minus">
+
+                <button id="plus" onclick="pluss()"><svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button id="miss" onclick="misss()" style="color:black; height: 70px;">miss</button>
+
+                <div>
+                    <button id="minus" onclick="minuss()"><svg stroke="currentColor" fill="black" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button><br><p>Just in case ;D </p>
+                </div>
+            </div>
+            <!-- Button to Capture Screenshot -->
+            
+          
+        </form>
+
+    </div>
+
+
+    <footer>
+
+        <h6>made by: Darko</h6>
+
+    </footer>
+
+
+
+
+    <script>
+        // Access the file input and preview elements
+        const fileInput = document.getElementById('fileInput');
+        const imagePreview = document.getElementById('imagePreview');
+        const this_bye = document.getElementById("this_bye");
+        
+        // Event listener for file input change
+        fileInput.addEventListener('change', function() {
+            const file = fileInput.files[0]; // Get the first selected file
+            let na = file.name
+            let take_and_splice = na.split(".")
+            console.log(take_and_splice)
+
+
+            if (file) {
+                // Create a FileReader object to read the file
+                const reader = new FileReader();
+
+                // Once the file is read, display the preview
+                reader.onload = function(event) {
+                    // Set the src of the image preview to the file content
+                    imagePreview.src = event.target.result;
+                    imagePreview.style.display = 'block'; // Make the preview visible
+                };
+
+                // Read the file as a data URL (base64 encoded)
+                reader.readAsDataURL(file);
+
+
+            } else {
+
+                alert("fajlot e ne validen :(")
+
+            }
+
+            if (take_and_splice[1] !== "png") {
+                alert("fajlot e ne validen :(")
+            }
+
+            this_bye.style.display = "none"
+
+
+        });
+
+        // Function to capture screenshot
+        function captureScreenshot() {
+            const content = document.getElementById('hey');
+            
+            // Use html2canvas to take a screenshot of the content element
+            html2canvas(content).then(function(canvas) {
+                // Convert the canvas to a data URL (image)
+                const img = canvas.toDataURL("image/png");
+
+                // Create an invisible download link
+                const link = document.createElement('a');
+                link.href = img;
+                link.download = 'RocketResult.png'; // Set default file name
+                link.click(); // Simulate click to trigger download
+            });
+        }
+        
+    </script>
+
+    <script type="module" src="structure.js"></script>
+
+</body>
+</html>

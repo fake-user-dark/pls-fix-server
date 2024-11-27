@@ -1,0 +1,291 @@
+html body {
+
+    background-color: rgb(44, 44, 44);
+    font-style: normal;
+    overflow-x:  hidden;
+    
+
+
+
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+* {
+
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    color: white;
+
+
+
+
+}
+
+#imagePreview {
+
+    transform: translate(0px, -100%);
+
+}
+
+form input {
+
+    display: none;
+}
+
+
+
+
+#imagePreview {
+    width: 500px;
+    height: 300px;
+
+    transform: translate(0px, -18px);
+
+}
+
+#top_nav {
+
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+
+    background-color: rgb(44, 44, 44);
+    padding-top: 3%;
+
+
+
+}
+
+#top_nav svg {
+
+
+    margin-left: 80%;
+
+    margin-top: -1%;
+    position: absolute;
+    z-index: 100;
+
+}
+
+
+
+#top_nav {
+
+    background-color: rgb(44, 44, 44);
+
+
+}
+#top_nav h2{
+
+    font-weight: 500;
+    margin-left: -15%;
+
+}
+
+.container #sub-title h2{
+
+    text-align: center;
+
+}
+
+#menu_burger_opt {
+
+    position: absolute;
+    background-color: black;
+    width: 70%;
+    height: 100%;
+    display: none;
+    z-index: 1;
+    margin-left: 30%;
+    transition: 300ms;
+    padding-top: 3%;
+    -webkit-box-shadow: -50px -9px 300px 12px rgba(0,0,0,0.75);
+-moz-box-shadow: -50px -9px 300px 12px rgba(0,0,0,0.75);
+box-shadow: -120px -9px 00px 12px rgba(0,0,0,0.45);
+    border-left: 1px solid white;
+    overflow: auto;
+
+    
+
+
+}
+
+#menu_burger_opt img {
+
+    margin-top: 90%;
+    position: absolute;
+    left: 12%;
+
+
+
+}  
+#menu_burger_opt h2 {
+
+    margin-bottom:10%;
+
+} 
+
+#menu_burger_opt li {
+
+    border-top: 1px solid gray;
+    padding: 5%;
+
+}
+
+@keyframes come_in {
+
+    0% {
+        transform: translate(100%);
+    }
+    100% {
+        transform: translate(0%);
+
+
+    }
+    
+}
+
+#sub-title {
+
+    text-align: center;
+    opacity: 50%;
+
+}
+
+form #icons {
+
+    display: flex;
+    justify-content: space-around;
+
+}
+
+#tuka_slika {
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+
+
+}
+
+#hey h1{
+
+    text-align: center;
+    font-size: 400%;
+
+}
+
+#hey h2{
+
+    text-align: center;
+
+}
+
+#plus_minus {
+    margin-top: 10%;
+
+    position: relative;
+    display: block;
+
+
+
+
+
+
+
+
+
+}
+#plus_minus #minus {
+    margin-top: 5%;
+
+    position: relative;
+    width: 40%;
+    height: 70px;
+    margin-LEFT: 30%;
+    background-color: rgb(104, 0, 0);
+
+
+}
+#plus_minus button {
+
+    position: relative;
+
+    margin-LEFT: 30%;
+    width: 40%;
+    height: 160px;
+    border-radius: 15px;
+    border: none;
+    transition: 500ms;
+    opacity: 100%;
+
+
+
+}
+
+#plus_minus p {
+
+    text-align: center;
+
+}
+
+footer {
+
+    height: 5vh;
+    margin-top: 51.5%;
+
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer h6 {
+
+    opacity: 15%;
+
+}
+
+#plus_minus div {
+
+    margin-top: 2%;
+
+
+}
+#hey {
+
+    width: 100%;
+    background-color: rgb(44, 44, 44);
+
+}
+
+#difficultry_mode {
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+
+
+}
+#difficultry_mode button {
+
+    width: 30%;
+    color: black;
+    border-radius: 10px;
+    border: none;
+
+
+}
